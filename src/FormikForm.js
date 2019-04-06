@@ -1,9 +1,17 @@
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
+import * as yup from 'yup';
 
 function isEmpty(obj) {
   return Object.keys(obj).length === 0 && obj.constructor === Object;
 }
+
+const validationSchema = yup.object().shape({
+  name: yup
+    .string()
+    .required('Required')
+    .max(50, 'Too long')
+});
 
 function FormikForm() {
   return (
@@ -11,13 +19,7 @@ function FormikForm() {
       <h3>Formik form</h3>
       <Formik
         initialValues={{ name: '' }}
-        validate={values => {
-          const errors = {};
-          if (!values.name) {
-            errors.name = 'Required';
-          }
-          return errors;
-        }}
+        validationSchema={validationSchema}
         onSubmit={(values, actions) => {
           console.log(values);
           actions.setSubmitting(false);
