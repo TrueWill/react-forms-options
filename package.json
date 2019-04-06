@@ -6,7 +6,11 @@
     "formik": "^1.5.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-redux": "^6.0.1",
     "react-scripts": "2.1.8",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-form": "^8.1.0",
     "yup": "^0.27.0"
   },
   "scripts": {
@@ -23,5 +27,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {}
 }
