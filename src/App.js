@@ -4,6 +4,7 @@ import HookForm from './HookForm';
 import FormikForm from './FormikForm';
 import ReduxForm from './ReduxForm';
 import FinalForm from './FinalForm';
+import Informed from './Informed';
 
 function App() {
   const reduxSubmit = values => {
@@ -22,6 +23,8 @@ function App() {
       <ReduxForm onSubmit={reduxSubmit} />
       <hr />
       <FinalForm />
+      <hr />
+      <Informed />
     </div>
   );
 }
