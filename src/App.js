@@ -5,6 +5,7 @@ import FormikForm from './FormikForm';
 import ReduxForm from './ReduxForm';
 import FinalForm from './FinalForm';
 import Informed from './Informed';
+import HookedForm from './HookedForm';
 
 function App() {
   const reduxSubmit = values => {
@@ -25,6 +26,8 @@ function App() {
       <FinalForm />
       <hr />
       <Informed />
+      <hr />
+      <HookedForm />
     </div>
   );
 }
